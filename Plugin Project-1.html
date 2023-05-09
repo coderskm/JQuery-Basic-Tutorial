@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./third party/countdown/css/flip-clock.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./third party/countdown/js/flip-clock.js"></script>
+  </head>
+  <body>
+    <div>
+    <h1 style="text-align: center; font-size: larger;" >Coming Soon ...</h1>
+
+    </div>
+    <ul class="flip-clock-container flip-example">
+      <li class="flip-item-seconds">23</li>
+      <li class="flip-item-minutes">38</li>
+      <li class="flip-item-hours">23</li>
+      <li class="flip-item-days">10</li>
+    </ul>
+
+    <script>
+      $(".flip-demo").on("done", function () {
+        console.log("doooooonnnnnee!");
+      });
+
+      $(".flip-demo").on(
+        'before<a href="https://www.jqueryscript.net/tags.php?/Flip/">Flip</a>ping',
+        function (e, data) {
+          console.log("beforeFlipping:", data);
+        }
+      );
+
+      $(".flip-demo").on("afterFlipping", function (e, data) {
+        console.log("afterFlipping:", data);
+      });
+    </script>
+  </body>
+</html>

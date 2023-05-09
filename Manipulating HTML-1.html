@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">this is a p tag</p>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <br><br>
+
+    <div id="colored-div" style="background-color:green; height: 100px; width: 100px;">
+        <p>this is a p tag <a href="#" id="link" class="red">link</a> </p>
+    </div>
+
+<!--before-->
+    <ul id="list">
+<!--prepend-->
+        <li>red</li>
+        <li>black</li>
+        <li>green</li>
+<!--append-->
+    </ul>
+<!--after-->
+
+    <input id="input1" type="text">
+
+    <script>
+        $('#list').append('<li>yellow</li>');
+        $('#list').prepend('<li>yellow</li>');
+        $('#list').after('<p>after element</p>');
+        $('#list').before('<p>before element</p>');
+        $('#list').empty();
+        $('#list').remove();
+
+
+        $('#btn1').click(function(){
+            var txt = $('#colored-div').text();
+            alert(txt);
+        });
+
+        $('#btn1').click(function(){
+            $('#colored-div').html('<h1>heading</h1>');
+        });
+
+        $('#btn1').click(function(){
+             $('#colored-div').text('your name');
+         });
+
+        $('#btn1').click(function(){
+            var value =  $('#input1').val();
+            alert(value);
+         });
+
+        $('#btn1').click(function(){
+            $('#input1').val('sumit kumar mishra');
+         });
+
+        $('#btn1').click(function(){
+            var value = $('#link').attr('href');
+            alert(value);
+         });
+
+        $('#btn1').click(function(){
+            $('#link').attr('class','black');
+         });
+
+        $('#btn1').click(function(){
+            $('#link').attr({
+                'class':'black',
+                'href':'https://in.search.yahoo.com/?fr2=inr'
+            });
+         });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./third party/magnify/js/jquery.jqZoom.js"></script>
+    <link rel="stylesheet" href="./third party/magnify/css/jquery.jqZoom.css" />
+  </head>
+  <body>
+    <div class="zoom-box">
+      <img id="product" src="https://shorturl.at/fuvD6" width="250" height="250" style="border: 2px solid black" />
+    </div>
+
+    <script>
+      $(function () {
+        $("#product").jqZoom({
+          // settings here
+          selectorWidth: 30,
+          selectorHeight: 30,
+          selectorWidth: 30,
+          selectorHeight: 30,
+          viewerWidth: 1000,
+          viewerHeight: 1000,
+        });
+      });
+    </script>
+  </body>
+</html>

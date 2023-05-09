@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            padding:10px;
+            margin:20px;
+        }
+        .red{
+            background-color: red;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+        .black{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+   <div id="box" class="box red"></div>
+   <button id="btn">click</button>
+
+   <script>
+    $('#btn').click(function(){
+        $('#box').addClass('circle black');
+    })
+
+    $('#btn').click(function(){
+        $('#box').removeClass('box');
+    })
+
+    $('#btn').click(function(){
+        $('#box').toggleClass('circle');
+    })
+
+    $('#btn').click(function(){
+        var css = $('#box').css('background-color');
+        alert(css);
+    })
+
+    $('#btn').click(function(){
+        $('#box').css('background-color','yellow');
+    })
+
+    $('#btn').click(function(){
+        $('#box').css({
+            'background-color':'yellow',
+            'border':'5px solid green'
+        });
+    })
+
+        $('#btn').click(function(){
+            var data = $('#box').outerWidth(true);
+            alert(data);
+        })
+   </script>
+</body>
+</html>

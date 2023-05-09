@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="ajax-msg"></div>
+
+    <script>
+        getData();
+        function getData(){
+            $.ajax({
+                url:'sample.html',
+                type:'GET',
+                dataType:'text',
+                success:successFn,
+                error:errorFn,
+                complete:function(xhr,status){
+                    console.log("the request is completed")
+                }
+        })
+        }
+
+        function successFn(result){
+            console.log('success');
+            $('#ajax-msg').append(result)
+        }
+        function errorFn(xhr, status, strErr){
+            console.log(xhr);
+            console.log(status);
+            console.log(strErr);
+            console.log('error');
+        }
+    </script>
+</body>
+</html>
